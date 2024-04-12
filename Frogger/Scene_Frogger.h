@@ -53,8 +53,8 @@ private:
 	sf::Clock		shotClock;
 	sf::Clock		stepClock;
 	sf::Clock		invincibilityTimer;
-	//sf::Clock		displayTimer;
-	//const sf::Time displayDuration = sf::seconds(3.0f);
+	sf::Clock		displayTimer;
+	const sf::Time displayDuration = sf::seconds(3.0f);
 
 
 	sf::Clock		skill1Clock;
@@ -82,12 +82,17 @@ private:
 	bool			abyssalResonance{ false };
 	bool			spectralEcho{ false };
 
+	bool			pistolEquipped{ true };
+	bool			shotgunEquipped{ false };
+	bool			sniperEquipped{ false };
+
 	bool			skill1_unlocked{ false };
 	bool			skill2_unlocked{ false };
 	bool			skill3_unlocked{ false };
 
 	bool			floor_display{ true };
 
+	float			playerSpeed = 250.f;
 	float			enemySpeed = 50.0f;
 
 	sf::Texture		m_shroud;

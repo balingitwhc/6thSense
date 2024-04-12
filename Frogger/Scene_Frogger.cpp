@@ -238,8 +238,8 @@ void Scene_Frogger::spawnEnemies(int num, float min, float max) {
         sf::Vector2f direction = pPos - ePos;
 
         // increase enemy speed by 10 after every 5 kills
-        if (m_kill % 10 == 0) {
-            enemySpeed += 5.f;
+        if (m_kill % 5 == 0) {
+            enemySpeed += 1.f;
             std::cout << enemySpeed;
         }
 
@@ -287,6 +287,7 @@ void Scene_Frogger::spawnEnemies(int num, float min, float max) {
         else {
             enemy->addComponent<CAnimation>(Assets::getInstance().getAnimation("car"));
         }
+        std::cout << enemySpeed << "\n";
     }
 }
 
@@ -384,21 +385,21 @@ void Scene_Frogger::sDoAction(const Command& action) {
         else if (action.name() == "TOGGLE_GRID" and m_drawDevHUD) { m_drawGrid = !m_drawGrid; }
         else if (action.name() == "TOGGLE_TEXTURE" and m_drawDevHUD) { m_drawTextures = !m_drawTextures; }
         
-        else if (action.name() == "SKILL_1" and m_drawDevHUD) { if (shadowSight == true) { return; } shadowSight = true; } // Shadow Sight
-        else if (action.name() == "SKILL_2" and m_drawDevHUD) { if (abyssalResonance == true) { return; } abyssalResonance = true; enemySpeed *= 0.50; } // Abyssal Resonance
-        else if (action.name() == "SKILL_3" and m_drawDevHUD) { if (spectralEcho == true) { return; } spectralEcho = true; bulletSpread = true; bulletPierce = true; shotDecay = 0.1f;} // Spectral Echo
+        else if (action.name() == "SKILL_1" and m_drawDevHUD) { if (shadowSight == true) { return; } skill1_unlocked = true; shadowSight = true; } // Shadow Sight
+        else if (action.name() == "SKILL_2" and m_drawDevHUD) { if (abyssalResonance == true) { return; } skill2_unlocked = true; abyssalResonance = true; enemySpeed *= 0.25f; } // Abyssal Resonance
+        else if (action.name() == "SKILL_3" and m_drawDevHUD) { if (spectralEcho == true) { return; } skill3_unlocked = true; spectralEcho = true; bulletSpread = true; bulletPierce = true; shotDecay = 0.1f;} // Spectral Echo
 
-        else if (action.name() == "PISTOL" and m_drawDevHUD) { bulletPierce = false; bulletSpread = false; }
-        else if (action.name() == "SHOTGUN" and m_drawDevHUD) { bulletSpread = true; bulletPierce = false;}
-        else if (action.name() == "SNIPER" and m_drawDevHUD) { bulletPierce = true; bulletSpread = false;}
+        else if (action.name() == "PISTOL" and m_drawDevHUD) { pistolEquipped = true; shotgunEquipped = false; sniperEquipped = false; bulletPierce = false; bulletSpread = false; }
+        else if (action.name() == "SHOTGUN" and m_drawDevHUD) { shotgunEquipped = true; pistolEquipped = false; sniperEquipped = false; bulletSpread = true; bulletPierce = false;}
+        else if (action.name() == "SNIPER" and m_drawDevHUD) { sniperEquipped = true; pistolEquipped = false; shotgunEquipped = false; bulletPierce = true; bulletSpread = false;}
 
-        else if (action.name() == "FLOOR_1" and m_drawDevHUD) { m_floor = 1; }
-        else if (action.name() == "FLOOR_2" and m_drawDevHUD) { m_floor = 2; }
-        else if (action.name() == "FLOOR_3" and m_drawDevHUD) { m_floor = 3; }
-        else if (action.name() == "FLOOR_4" and m_drawDevHUD) { m_floor = 4; }
-        else if (action.name() == "FLOOR_5" and m_drawDevHUD) { m_floor = 5; }
-        else if (action.name() == "FLOOR_6" and m_drawDevHUD) { m_floor = 6; }
-        else if (action.name() == "FLOOR_7" and m_drawDevHUD) { m_floor = 7; }
+        else if (action.name() == "FLOOR_1" and m_drawDevHUD) { m_floor = 1; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_2" and m_drawDevHUD) { m_floor = 2; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_3" and m_drawDevHUD) { m_floor = 3; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_4" and m_drawDevHUD) { m_floor = 4; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_5" and m_drawDevHUD) { m_floor = 5; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_6" and m_drawDevHUD) { m_floor = 6; displayTimer.restart();        }
+        else if (action.name() == "FLOOR_7" and m_drawDevHUD) { m_floor = 7; displayTimer.restart();        }
 
         // Player control
         else if (action.name() == "LEFT") {
@@ -464,7 +465,7 @@ void Scene_Frogger::playerMovement() {
         return;
 
     // player movement
-    sf::Vector2f pv{ 0.f, 0.f };
+    sf::Vector2f pv{ 0, 0.f };
     auto& pInput = m_player->getComponent<CInput>();
     if (pInput.left) pv.x -= 1;
     if (pInput.right) pv.x += 1;
@@ -473,7 +474,7 @@ void Scene_Frogger::playerMovement() {
     pv = normalize(pv);
 
     sf::Vector2f aimDirection(50, 50);
-    m_player->getComponent<CTransform>().vel = 250.f * pv;
+    m_player->getComponent<CTransform>().vel = playerSpeed * pv;
 
     if (sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
         auto clickPos = sf::Mouse::getPosition(m_game->window());
@@ -617,7 +618,7 @@ void Scene_Frogger::sRender() {
         m_game->window().draw(m_kill_text);
     }
 
-    if (floor_display == true)
+    if (floor_display == true && (displayTimer.getElapsedTime() < displayDuration))
     {
         m_floor_text.setFont(Assets::getInstance().getFont("abyssal"));
         m_floor_text.setPosition(m_worldView.getCenter().x, m_worldView.getCenter().y - m_worldView.getCenter().y + 150.f);
@@ -635,6 +636,7 @@ void Scene_Frogger::sRender() {
             case 7: m_floor_text.setString("Floor 7"); break;
             default: break;
         }
+
         m_game->window().draw(m_floor_text);
     }
 
@@ -648,11 +650,11 @@ void Scene_Frogger::sRender() {
     }
 
     if (m_drawDevHUD) {
-        // Toggle Textures Here
         m_controls_text.setFont(Assets::getInstance().getFont("main"));
         m_controls_text.setPosition(10.f, 255.f);
         m_controls_text.setCharacterSize(25);
         m_controls_text.setString(R"(
+        DEV MODE [ON]
             1    : Shadow Sight
             2   : Abyssal Resonance
             3   : Spectral Echo
@@ -676,13 +678,16 @@ void Scene_Frogger::update(sf::Time dt) {
 
     sf::Time skill2Cooldown = skill2Clock.getElapsedTime();
     if (skill2Cooldown.asSeconds() >= 9) {
-        abyssalResonance = false; enemySpeed *= 2;
+        abyssalResonance = false; enemySpeed *= 1.25f;
         skill2Clock.restart();
     }
 
     sf::Time skill3Cooldown = skill3Clock.getElapsedTime();
     if (skill3Cooldown.asSeconds() >= 6) {
-        spectralEcho = false; bulletSpread = false; bulletPierce = false; shotDecay = 1.f;
+        spectralEcho = false; 
+        if (!shotgunEquipped) bulletSpread = false; 
+        if (!sniperEquipped) bulletPierce = false;
+        shotDecay = 1.f;
         skill3Clock.restart();
     }
 
@@ -690,10 +695,10 @@ void Scene_Frogger::update(sf::Time dt) {
         switch (m_kill)
         {
             case 20: m_floor = 2; skill1_unlocked = true; break;
-            case 30: m_floor = 3; skill2_unlocked = true; break;
-            case 50: m_floor = 4; skill3_unlocked = true; break;
-            case 60: m_floor = 5; break;
-            case 80: m_floor = 6; break;
+            case 30: m_floor = 3; skill2_unlocked = true; playerSpeed *= 1.5f; break;
+            case 50: m_floor = 4; skill3_unlocked = true; playerSpeed *= 1.5f; break;
+            case 60: m_floor = 5; playerSpeed *= 1.25f; break;
+            case 80: m_floor = 6; playerSpeed *= 1.25f; break;
             case 100: m_floor = 7; break;
             default:
                 break;
@@ -730,10 +735,13 @@ void Scene_Frogger::sCollisions() {
 
         if (collide.x > 0.f and collide.y > 0.f) {
 
-            m_player->addComponent<CState>().state = "die";
-            m_player->addComponent<CAnimation>(Assets::getInstance().getAnimation("die"));
-            m_player->removeComponent<CBoundingBox>();
-            m_player->removeComponent<CInput>();
+            if (!spectralEcho)
+            {
+                m_player->addComponent<CState>().state = "die";
+                m_player->addComponent<CAnimation>(Assets::getInstance().getAnimation("die"));
+                m_player->removeComponent<CBoundingBox>();
+                m_player->removeComponent<CInput>();
+            }
 
             e->addComponent<CState>().state = "die";
             e->addComponent<CAnimation>(Assets::getInstance().getAnimation("die"));
