@@ -1,3 +1,3 @@
-# Frogger
+# 6th Sense
 
-Use this repository for your frogger project
+Use this repository for your project
