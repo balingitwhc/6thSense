@@ -1,0 +1,8 @@
+# Level 6
+
+World 1440 810
+
+
+Bkg Background 0 0
+Frg0 Foreground0 0 0
+Cur Cursor 0 0

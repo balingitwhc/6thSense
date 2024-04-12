@@ -1,0 +1,68 @@
+# GameEngine Config
+
+Window  1440 810
+
+Font    Arial           ../assets/fonts/arial.ttf
+Font    main            ../assets/fonts/Sansation.ttf
+Font    abyssal         ../assets/fonts/BlackChancery.ttf
+Font    Arcade          ../assets/fonts/arcadeclassic.regular.ttf
+
+Music gameTheme         ../assets/Music/frogger.ogg
+Music missionTheme      ../assets/Music/tweener.ogg
+
+# Textures
+Texture Foreground0     ../assets/Textures/fg_shroud_0.png
+Texture Foreground1		../assets/Textures/fg_shroud_1.png
+Texture Foreground2		../assets/Textures/fg_shroud_2.png
+Texture Foreground3		../assets/Textures/fg_shroud_3.png
+Texture Background      ../assets/Textures/bg_dirt.png
+Texture Title           ../assets/Textures/bg_splash.png
+Texture Entities        ../assets/Textures/FroggerAtlas.png
+Texture LightBullet		../assets/Textures/light_bullet.png
+Texture Cursor			../assets/Textures/crosshair.png
+
+# Sprites
+Sprite Background       Background   0 0  1440 810
+Sprite Foreground0      Foreground0  0 0  1440 810
+Sprite Foreground1      Foreground1   0 0  1440 810
+Sprite Foreground2		Foreground2  0 0  1440 810
+Sprite Foreground3		Foreground3  1440 810
+Sprite Title            Title 0 0 480 600
+Sprite Cursor			Cursor 0 0 50 50
+
+#
+# SOUNDS
+Sound footstep			../assets/Sound/Dirt/Steps_dirt-018.ogg
+Sound laserGun			../assets/Sound/laserGun.mp3
+Sound playerDie			../assets/Sound/playerDie.mp3
+Sound death             ../assets/Sound/slimeDie.mp3
+Sound hop               ../assets/Sound/froggerMove.wav
+
+JSON                    ../assets/Textures/FroggerAtlas.json
+
+
+#
+#  Animation    Name            Texture     Speed   Repeats
+Animation       up              Entities    8        no
+Animation       down            Entities    8        no
+Animation       left            Entities    8        no
+Animation       right           Entities    8        no
+Animation       die             Entities    8        no
+
+Animation       2turtles        Entities    1        yes
+Animation       3turtles        Entities    1        yes
+Animation       3turtlesUP      Entities    1        yes
+Animation       bugIcon         Entities    1        no
+Animation       car             Entities    1        no
+Animation       croc            Entities    1        yes
+Animation       crocIcon        Entities    1        no
+
+Animation       frogIcon        Entities    1        no
+Animation       lillyPad        Entities    1        no
+Animation       lives           Entities    1        no
+Animation       raceCarL        Entities    1        no
+Animation       raceCarR        Entities    1        no
+Animation       tree1           Entities    1        no
+Animation       tree2           Entities    1        no
+Animation       truck           Entities    1        no
+Animation       tractor         Entities    1        no

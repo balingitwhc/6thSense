@@ -1,0 +1,11 @@
+# Level 1
+
+World 1440 810
+
+
+Bkg Background 0 0
+Frg0 Foreground0 0 0
+Frg1 Foreground1 0 0
+Frg2 Foreground2 0 0
+Frg3 Foreground3 0 0
+Cur Cursor 0 0

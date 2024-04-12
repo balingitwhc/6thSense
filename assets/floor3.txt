@@ -1,0 +1,8 @@
+# Level 3
+
+World 1440 810
+
+
+Bkg Background 0 0
+Frg2 Foreground2 0 0
+Cur Cursor 0 0

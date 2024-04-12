@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Assets">
+      <UniqueIdentifier>{e1a6f5cf-d871-4f70-98f2-2dc40e882ad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Assets\Fonts">
+      <UniqueIdentifier>{373c676e-663e-4b4d-bb7d-146a5988c2ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Assets\Music">
+      <UniqueIdentifier>{beac8884-a662-43cb-a9fe-8e65d7465083}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Assets\Shaders">
+      <UniqueIdentifier>{6b234763-e697-452a-8177-d3a923a9528e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Assets\Sound">
+      <UniqueIdentifier>{8221c092-b322-4a44-8d3e-1bbf05301d09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Assets\Textures">
+      <UniqueIdentifier>{f83ab0c6-465a-4661-bc6e-796e06dbd3c0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Assets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EntityManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MusicPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Physics.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Frogger.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene_Menu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundPlayer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Animation.cpp">
+      <Filter>Header Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Animation.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Assets.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Components.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MusicPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Physics.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Frogger.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene_Menu.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundPlayer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\config.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="..\assets\floor1.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor2.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor3.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor4.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor5.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor6.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+    <Text Include="..\assets\floor7.txt">
+      <Filter>Resource Files\Assets</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="..\assets\Textures\froggerAtlas.json">
+      <Filter>Resource Files\Assets\Textures</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\assets\Textures\froggerAtlas.png">
+      <Filter>Resource Files\Assets\Textures</Filter>
+    </Image>
+    <Image Include="..\assets\Textures\background.png">
+      <Filter>Resource Files\Assets\Textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
