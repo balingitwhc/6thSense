@@ -180,6 +180,7 @@ void Scene_Frogger::spawnBullet(sf::Vector2f mPos)
         for (size_t i = 0; i < spreadCount; ++i)
         {
             shotAngles[i] = startingAngle - angleIncrement * 2 + angleIncrement * i;
+            SoundPlayer::getInstance().play("laserGun", m_player->getComponent<CTransform>().pos);
         }
 
         for (size_t i = 0; i < spreadCount; ++i)
@@ -193,6 +194,8 @@ void Scene_Frogger::spawnBullet(sf::Vector2f mPos)
             e->addComponent<CBoundingBox>(sf::Vector2f(20.f, 20.f));
             e->addComponent<CAnimation>(Assets::getInstance().getAnimation("bugIcon"));
             e->addComponent<CLifespan>(3.f);
+            SoundPlayer::getInstance().play("laserGun", m_player->getComponent<CTransform>().pos);
+
         }
         if (!spectralEcho) { m_ammo -= 1; }
         
