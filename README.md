@@ -29,6 +29,23 @@
 ## Environment
 ## Menu
 ## Controls
+- Keyboard:
+  - Directional Movement with Arrow Keys or WASD
+  - Skills used with Numerical Keys
+  - Consumable powerups with Z, X, C
+
+- Mouse
+  - Point and Click to aim and shoot in one action
 
 ## Sounds
+- Dark ambient music
+  - Creaking ruins and the unsettling noises of unseen creatures lurking in the dark
+
+- Weapon Sounds
+- Skill Use
+- Power-up Use
+
+*SFX are compact and short
+
 ## Summary
+"Eternal Abyss" immerses players in a chilling dark ambient survival shooter set within the depths of the Underworld, cloaked in perpetual darkness. Armed with a diverse array of weapons and the ability to unlock skills, players must endure through an eerie environment, facing relentless enemies. The goal: survive the perpetual onslaught or uncover the mysteries hidden within the eternal abyss. To aid in the struggle, players can utilize power-ups like increased light for visibility, slowed-down enemies, quick reloads, and brief periods of unlimited ammo. With atmospheric gameplay, strategic decision-making, and an enticing blend of survival and mystery, "Eternal Abyss" delivers an intense and haunting gaming experience.![image](https://github.com/balingitwhc/6thSense/assets/113614264/94bc05ed-5a1c-4883-892d-735147e1791c)
