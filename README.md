@@ -38,6 +38,7 @@
 <img src="https://github.com/balingitwhc/6thSense/blob/main/assets/Textures/profile_circle.png" alt="Elysia" width="200"/>
 **Elysia** is a seasoned explorer and survivalist with a mysterious past. Formerly a renowned archaeologist, she discovered a hidden portal to the Underworld during an expedition, forever altering her destiny. She is driven by an insatiable curiosity to uncover the secrets of the eternal abyss and avenge the colleagues lost in the dark depths.
 
+-----
 - Name: Elysia Darkborne
 - Abilities:
   - Base Ranged Weapon: Limited shots, increased capacity through leveling and recover ammo through defeating enemies.
@@ -47,10 +48,27 @@
     - Spectral Echo: Limited invincibility boost with unlimited ammo
   - Other weapons claimable through stages
 - Game View: Overhead or Bird’s Eye View
+-----
 
 ## Opponents
+1. Symbiotes
+   - Basic Enemy, follows the player
+     
+2. Wraiths
+   - Uncommon Enemy, follows the player, will turn invisible from time to time.
+     
+3. Revenants
+   - Intermediate Enemy, follows the player, will turn intangible from time to time.
+     
+4. Abyssal Serpents
+   - High-level Enemy, follows the player, will burrow under the ground from time to time.
+   
 ## Environment
-## Menu
+- Flatlands, desolate, dark and dreary
+
+## Menus
+- *pending*
+
 ## Controls
 - Keyboard:
   - Directional Movement with Arrow Keys or WASD
