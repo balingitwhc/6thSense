@@ -22,7 +22,7 @@
   - Clearing stages unlocks weapons and skills.
 
 ## Main Character
-
+<img src="https://github.com/balingitwhc/6thSense/blob/main/assets/Textures/profile_circle.png" alt="Elysia" width="200"/>
 **Elysia** is a seasoned explorer and survivalist with a mysterious past. Formerly a renowned archaeologist, she discovered a hidden portal to the Underworld during an expedition, forever altering her destiny. She is driven by an insatiable curiosity to uncover the secrets of the eternal abyss and avenge the colleagues lost in the dark depths.
 
 ## Opponents
@@ -48,4 +48,5 @@
 *SFX are compact and short
 
 ## Summary
-"Eternal Abyss" immerses players in a chilling dark ambient survival shooter set within the depths of the Underworld, cloaked in perpetual darkness. Armed with a diverse array of weapons and the ability to unlock skills, players must endure through an eerie environment, facing relentless enemies. The goal: survive the perpetual onslaught or uncover the mysteries hidden within the eternal abyss. To aid in the struggle, players can utilize power-ups like increased light for visibility, slowed-down enemies, quick reloads, and brief periods of unlimited ammo. With atmospheric gameplay, strategic decision-making, and an enticing blend of survival and mystery, "Eternal Abyss" delivers an intense and haunting gaming experience.![image](https://github.com/balingitwhc/6thSense/assets/113614264/94bc05ed-5a1c-4883-892d-735147e1791c)
+<img src="https://github.com/balingitwhc/6thSense/blob/main/assets/Textures/bg_splash.png" alt="Splash Screen"/>
+"Eternal Abyss" immerses players in a chilling dark ambient survival shooter set within the depths of the Underworld, cloaked in perpetual darkness. Armed with a diverse array of weapons and the ability to unlock skills, players must endure through an eerie environment, facing relentless enemies. The goal: survive the perpetual onslaught or uncover the mysteries hidden within the eternal abyss. To aid in the struggle, players can utilize power-ups like increased light for visibility, slowed-down enemies, quick reloads, and brief periods of unlimited ammo. With atmospheric gameplay, strategic decision-making, and an enticing blend of survival and mystery, "Eternal Abyss" delivers an intense and haunting gaming experience.
