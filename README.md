@@ -4,10 +4,14 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+- [The_Quest](#the_quest)
+- [Main_Character](#main_character)
+- [Opponents](#opponents)
+- [Environement](#environement)
+- [Menus](#menus)
+- [Controls](#controls)
+- [Sounds](#sounds)
+- [Summary](#summary)
 
 ## Overview
 "Dive into the heart of darkness with ‘6th Sense: Eternal Abyss,’ a **dark ambient survival shooter** that transports players to the chilling Underworld. The goal: **survive** the relentless onslaught of enemies or unveil the secrets of the eternal darkness the envelops the land with your arsenal of **weapons** and **skills**. Engage in atmospheric gameplay with dark ambient lighting, where power-ups like increased light and temporary invincibility offer a thrilling edge, making 'Eternal Abyss' a hauntingly simple yet immersive gaming experience."
