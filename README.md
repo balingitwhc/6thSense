@@ -4,8 +4,8 @@
 
 ## Table of Contents
 - [Overview](#overview)
-- [The Quest](#thequest)
-- [Main Character](#maincharacter)
+- [The_Quest](#the_quest)
+- [Main_Character](#main_character)
 - [Opponents](#opponents)
 - [Environement](#environement)
 - [Menus](#menus)
